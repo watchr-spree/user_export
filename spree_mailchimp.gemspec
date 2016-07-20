@@ -6,7 +6,7 @@ require "spree_mailchimp/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "spree_mailchimp"
-  s.version     = SpreeMailchimp::VERSION
+  s.version     = '3.0.9'
   s.authors     = ["Charlie Hawker"]
   s.email       = ["charlie.hawker@staffordlong.co.uk"]
   s.homepage    = "https://github.com/staffordlong/spree_mailchimp"
