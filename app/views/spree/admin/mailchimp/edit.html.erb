@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  <%= Spree.t(:mailchimp_settings, scope: :mailchimp) %>
+  <%= Spree.t(:export_user, scope: :mailchimp) %>
 <% end %>
 
 <%= form_tag admin_edit_mailchimp_path, method: :put do %>
@@ -9,29 +9,52 @@
 
       <div class="row">
         <div class="col-md-6">
-          <div class="form-group" data-hook="admin_mailchimp_input_mailchimp_api_key">
-            <%= label_tag :mailchimp_api_key %>
-            <%= text_field_tag :mailchimp_api_key, Spree::Config.mailchimp_api_key, class: 'form-control' %>
-          </div>
-
-          <div class="form-group" data-hook="admin_mailchimp_input_mailchimp_list_id">
-            <%= label_tag :mailchimp_list_id %>
-            <%= text_field_tag :mailchimp_list_id, Spree::Config.mailchimp_list_id, class: 'form-control'  %>
-          </div>
+         
 
           <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-              <%= check_box nil, :mailchimp_checkbox_during_registration, name: :mailchimp_checkbox_during_registration, checked: Spree::Config.mailchimp_checkbox_during_registration %> 
-              <%= Spree.t(:display_checkbox_during_registration, scope: :mailchimp) %>
+             <%=radio_button_tag(:action, "1")%>
+             
+              <%= Spree.t(:first, scope: :mailchimp) %>
             <% end %>
           </div>
-
-          <div class="checkbox" data-hook="admin_mailchimp_input_user_must_opt_in">
+          
+          
+                    <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-              <%= check_box nil, :mailchimp_user_must_opt_in, name: :mailchimp_user_must_opt_in, checked: Spree::Config.mailchimp_user_must_opt_in %> 
-              <%= Spree.t(:user_must_opt_in, scope: :mailchimp) %>
+             <%=radio_button_tag(:action, "2")%>
+             <%= Spree.t(:second, scope: :mailchimp) %>
             <% end %>
           </div>
+          
+          
+          <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
+            <%= label_tag do %>
+             <%=radio_button_tag(:action, "3")%>
+             <%= Spree.t(:thirth, scope: :mailchimp) %>
+            <% end %>
+          </div>
+          
+          <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
+            <%= label_tag do %>
+             <%=radio_button_tag(:action, "4")%>
+             
+              <%= Spree.t(:fourth, scope: :mailchimp) %>
+            <% end %>
+          </div>
+          
+          <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
+            <%= label_tag do %>
+             <%=radio_button_tag(:action, "5")%>
+              <%= Spree.t(:fiftin, scope: :mailchimp) %>
+              <%= number_field(:user, :xday, in: 1..999, step: 1, value: 30) %>
+              <%= Spree.t(:sixtin, scope: :mailchimp) %>
+            <% end %>
+          </div>
+          
+          
+
+
           <div class="form-actions" data-hook="buttons">
             <%= button Spree.t('actions.update'), 'save' %>
           </div>
