@@ -13,7 +13,7 @@
 
           <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-             <%=radio_button_tag(:action, "1")%>
+             <%=radio_button_tag(:state, "1")%>
              
               <%= Spree.t(:first, scope: :mailchimp) %>
             <% end %>
@@ -22,7 +22,7 @@
           
                     <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-             <%=radio_button_tag(:action, "2")%>
+             <%=radio_button_tag(:state, "2")%>
              <%= Spree.t(:second, scope: :mailchimp) %>
             <% end %>
           </div>
@@ -30,14 +30,14 @@
           
           <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-             <%=radio_button_tag(:action, "3")%>
+             <%=radio_button_tag(:state, "3")%>
              <%= Spree.t(:thirth, scope: :mailchimp) %>
             <% end %>
           </div>
           
           <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-             <%=radio_button_tag(:action, "4")%>
+             <%=radio_button_tag(:state, "4")%>
              
               <%= Spree.t(:fourth, scope: :mailchimp) %>
             <% end %>
@@ -45,7 +45,7 @@
           
           <div class="checkbox" data-hook="admin_mailchimp_input_checkbox_during_registration">
             <%= label_tag do %>
-             <%=radio_button_tag(:action, "5")%>
+             <%=radio_button_tag(:state, "5")%>
               <%= Spree.t(:fiftin, scope: :mailchimp) %>
               <%= number_field(:user, :xday, in: 1..999, step: 1, value: 30) %>
               <%= Spree.t(:sixtin, scope: :mailchimp) %>
@@ -56,7 +56,7 @@
 
 
           <div class="form-actions" data-hook="buttons">
-            <%= button Spree.t('actions.update'), 'save' %>
+            <%= button Spree.t('actions.download'), 'save' %>
           </div>
         </div>          
       </div>
